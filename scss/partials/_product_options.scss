@@ -1,0 +1,28 @@
+.product-options, .row {
+    height: 400px;
+
+    .opction-content {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .opction-title {
+            font-weight: 600;
+            font-size: $fontSize2;
+            margin-top: 25px;
+        }
+
+        .opction-text{
+            text-align: center;
+            width: 300px;
+            padding: 17px 25px 22px 25px;
+        }
+
+        .check-ofert {
+            text-transform: uppercase;
+            color: $colorSecondary;
+        }
+    }
+}
