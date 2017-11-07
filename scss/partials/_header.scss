@@ -1,0 +1,108 @@
+header {
+    height: 150px;
+
+    .main-header {
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+
+        .main-logo {
+            a {
+                display: block;
+                padding-top: 10px;
+            }
+            img {
+                max-width: 180px;
+                height: auto;
+                display: inline-block;
+                transition: 0.5s all;
+            }
+        }
+
+        .main-nav {
+            font-size: $fontSize3;
+
+            ul li {
+                display: inline-block;
+
+                a {
+                    display: inline-block;
+	                padding: 10px 15px;
+                    text-decoration: none;
+                    color: $colorPrimary;
+                    font-weight: 500;
+                    transition: 0.5s color;
+
+                    &:last-of-type {
+                    	padding-right: 0;
+                    }
+
+                    &:hover {
+            			color: $colorSecondary;
+            		}
+                }
+            }
+        }
+    }
+}
+
+header .sub-header {
+    height: 30px;
+    background-color: $colorQuinary;
+    display: flex;
+    justify-content: space-between;
+    font-size: $fontSize3;
+    padding: 0 40px;
+
+    .quick-contact {
+        display: flex;
+        align-items: center;
+
+        ul li {
+            display: inline-block;
+
+            a {
+                display: inline-block;
+                margin: 0 30px;
+                text-decoration: none;
+                color: $colorPrimary;
+                position: relative;
+
+                .map-maker {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        background-image: url("../images/google_maps_black.png");
+                        width: 22px;
+                        height: 24px;
+                        top: -2px;
+                        left: -27px;
+                    }
+                }
+
+                .telephone {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        background-image: url("../images/call_black.png");
+                        width: 26px;
+                        height: 26px;
+                        top: -4px;
+                        left: -32px;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-social ul li {
+        display: inline-block;
+        margin: 0 5px;
+
+        &:last-of-type {
+            padding-right: 0;
+        }
+    }
+}

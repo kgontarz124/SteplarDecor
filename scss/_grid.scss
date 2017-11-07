@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+@mixin clearfix() {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+
+//==========================================
+//GRID
+//==========================================
+$column : 12;
+$gutter : 10px;
+
+.row {
+    margin-bottom:0;
+    
+
+    [class*="col-"] {
+        float:none;
+        width:100%;
+        margin-bottom: $gutter * 2;
+    }
+}
+
+@media (min-width:700px) {
+    .row {
+        @include clearfix();
+
+
+        [class*="col-"] {
+            float: left;
+            padding-left: $gutter;
+            padding-right: $gutter;
+            margin-bottom: 0;
+        }
+
+        @for $i from 1 through $column {
+            .col-#{$i}-#{$column} {
+                width: ((100 / $column) * $i) * 1%;
+            }
+        }
+    }
+}

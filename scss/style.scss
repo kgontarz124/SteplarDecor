@@ -1,0 +1,13 @@
+@import "partials/_reset.scss";
+@import "_grid.scss";
+@import "_variables.scss";
+@import "_global_classes.scss";
+@import "partials/_header.scss";
+
+
+html, body {
+    font-family: $fontPrimary;
+    font-size: 14px;
+    color: $colorPrimary;
+
+}
