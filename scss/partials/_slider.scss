@@ -1,0 +1,42 @@
+.slider-section {
+    height: 450px;
+
+    .slider {
+        background-image: url("../images/baner.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 450px;
+        max-width: 100%;
+        background-size: 100% auto;
+        position: relative;
+        z-index: 2;
+        border-bottom: 4px solid $colorSecondary;
+
+        .arrow-left, .arrow-right, .slider-blocks {
+            position: absolute;
+            z-index: 1;
+        }
+        .arrow-left {
+            top: 50%;
+            left: 20px;
+        }
+
+        .arrow-right {
+            top: 50%;
+            right: 20px;
+        }
+
+        .slider-blocks {
+            bottom: 20px;
+            left: 500px;
+
+            .block {
+                width: 30px;
+                height: 3.2px;
+                background: $colorTertiary;
+                display: inline-block;
+                margin-left: 3px;
+            }
+        }
+    }
+}

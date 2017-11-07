@@ -1,5 +1,5 @@
 header {
-    height: 150px;
+    height: 154px;
 
     .main-header {
         height: 120px;
@@ -29,7 +29,7 @@ header {
 
                 a {
                     display: inline-block;
-	                padding: 10px 15px;
+	                padding: 10px 20px;
                     text-decoration: none;
                     color: $colorPrimary;
                     font-weight: 500;
@@ -49,8 +49,8 @@ header {
 }
 
 header .sub-header {
-    height: 30px;
-    background-color: $colorQuinary;
+    height: 34px;
+    background-color: $colorTertiary;
     display: flex;
     justify-content: space-between;
     font-size: $fontSize3;
@@ -100,6 +100,7 @@ header .sub-header {
     .header-social ul li {
         display: inline-block;
         margin: 0 5px;
+        padding-top: 4px;
 
         &:last-of-type {
             padding-right: 0;
