@@ -41,6 +41,11 @@
             text-decoration: none;
             position: relative;
             line-height: 20px;
+            transition: 0.5s color;
+
+            &:hover {
+                color: $colorSecondary;
+            }
 
             .map-maker, .telephone {
                 &:before {
@@ -74,6 +79,11 @@
         a {
             color: $colorTertiary;
             text-decoration: none;
+            transition: 0.5s color;
+
+            &:hover {
+                color: $colorSecondary;
+            }
 
             .greater-than-sign {
                 color: $colorSecondary;
