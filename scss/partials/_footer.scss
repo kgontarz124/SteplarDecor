@@ -3,11 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 52px;
+    height: 34px;
 
     ul li {
         display: inline-block;
-        margin: 4px 13px 0 13px;
+        margin-left: 8px;
     }
 }
 
@@ -26,15 +26,21 @@
         }
     }
 
+    .footer-logo {
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .footer-contact li {
         list-style-type: none;
         margin-bottom: 18px;
+        margin-left: 40px;
 
         a {
             color: $colorTertiary;
             text-decoration: none;
             position: relative;
-            margin-left: 40px;
+            line-height: 20px;
 
             .map-maker, .telephone {
                 &:before {
@@ -55,7 +61,7 @@
 
             .telephone {
                 &:before {
-                    background-image: url("../images/google_maps_blue.png");
+                    background-image: url("../images/call _blue.png");
                 }
             }
         }

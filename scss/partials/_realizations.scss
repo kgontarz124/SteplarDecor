@@ -17,54 +17,45 @@
 .box-with-realization {
     height: 330px;
     background: $colorQuinary;
+    position: relative;
 
-
-    .box-img-1, .box-img-2, .box-img-3 {
-        height: 300px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: relative;
+    &:hover .realization-image {
+        transform: scale(1.12);
     }
 
-    .box-img-1 {
-        background-image: url("../images/steplar_mercedes_red.jpg");
+    .realization-image {
+        transition: 0.7s;
     }
 
-    .box-img-2 {
-        background-image: url("../images/steplar_dr_irena_eris.jpg");
-    }
-
-    .box-img-3 {
-        background-image: url("../images/steplar_jack_daniels.jpg");
+    .img-holder {
+        max-width: 314.33px;
+        max-height: 204.27px;
+        overflow: hidden;
     }
 
     .realization-message {
-        height: 170px;
+        height: 180px;
         max-width: 90%;
         background: rgba(249,249,249,0.7);
         position: absolute;
-        bottom: -20px;
+        bottom: 5px;
         left: 15px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: 0.7s;
-
-        &:hover {
-            transform: scale(1.12);
-        }
 
         .realization-tittle {
             font-weight: 600;
             font-size: $fontSize3;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
         }
 
         .realizactin-text {
             text-align: center;
-            padding: 18px 10px 20px 10px;
+            padding: 15px 10px 20px 10px;
         }
     }
 }

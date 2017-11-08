@@ -65,7 +65,7 @@ header .sub-header {
 
             a {
                 display: inline-block;
-                margin: 0 30px;
+                margin: 0 28px;
                 text-decoration: none;
                 color: $colorPrimary;
                 position: relative;
@@ -75,9 +75,9 @@ header .sub-header {
                         content: "";
                         position: absolute;
                         background-image: url("../images/google_maps_black.png");
-                        width: 22px;
+                        width: 16px;
                         height: 24px;
-                        top: -2px;
+                        top: -3px;
                         left: -27px;
                     }
                 }
@@ -87,9 +87,9 @@ header .sub-header {
                         content: "";
                         position: absolute;
                         background-image: url("../images/call_black.png");
-                        width: 26px;
-                        height: 26px;
-                        top: -4px;
+                        width: 24px;
+                        height: 24px;
+                        top: -2px;
                         left: -32px;
                     }
                 }
@@ -100,7 +100,7 @@ header .sub-header {
     .header-social ul li {
         display: inline-block;
         margin: 0 5px;
-        padding-top: 4px;
+        padding-top: 5px;
 
         &:last-of-type {
             padding-right: 0;

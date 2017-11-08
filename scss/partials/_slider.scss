@@ -2,15 +2,20 @@
     height: 450px;
 
     .slider {
-        background-image: url("../images/baner.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
         height: 450px;
         max-width: 100%;
-        background-size: 100% auto;
         position: relative;
-        z-index: 2;
-        border-bottom: 4px solid $colorSecondary;
+        z-index: 100;
+
+        .baner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            border-bottom: 4px solid $colorSecondary;
+            transition: 0.8s 0s ease-in-out all;
+        }
 
         .arrow-left, .arrow-right, .slider-blocks {
             position: absolute;
@@ -19,16 +24,24 @@
         .arrow-left {
             top: 50%;
             left: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         .arrow-right {
             top: 50%;
             right: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         .slider-blocks {
             bottom: 20px;
-            left: 500px;
+            left: 450px;
 
             .block {
                 width: 30px;
@@ -37,6 +50,16 @@
                 display: inline-block;
                 margin-left: 3px;
             }
+
+            .active-block {
+                background: $colorSecondary;
+            }
         }
     }
+}
+
+// slider
+.slider .baner.active {
+    opacity: 1;
+    visibility: visible;
 }
