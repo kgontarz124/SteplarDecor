@@ -1,5 +1,4 @@
 .product-options, .row {
-    height: 400px;
 
     .opction-content {
         height: 400px;
@@ -18,11 +17,6 @@
             text-align: center;
             width: 300px;
             padding: 17px 25px 22px 25px;
-        }
-
-        .check-ofert {
-            text-transform: uppercase;
-            color: $colorSecondary;
         }
     }
 }

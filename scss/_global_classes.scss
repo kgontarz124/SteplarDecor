@@ -3,3 +3,14 @@
     margin: 0 auto;
     max-width: 1040px;
 }
+
+.check {
+    text-transform: uppercase;
+    color: $colorSecondary;
+}
+
+.align-to-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
