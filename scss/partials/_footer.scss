@@ -1,0 +1,78 @@
+.footer-social {
+    background: $colorSecondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+
+    ul li {
+        display: inline-block;
+        margin: 4px 13px 0 13px;
+    }
+}
+
+.main-footer {
+    min-width: 80px;
+    background: $colorPrimary;
+    display: flex;
+    color: $colorTertiary;
+
+    [class*="col-"] {
+        width:25%;
+        margin: 30px 30px 30px 0;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    .footer-contact li {
+        list-style-type: none;
+        margin-bottom: 18px;
+
+        a {
+            color: $colorTertiary;
+            text-decoration: none;
+            position: relative;
+            margin-left: 40px;
+
+            .map-maker, .telephone {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 26px;
+                    height: 26px;
+                    top: -6px;
+                    left: -35px;
+                }
+            }
+
+            .map-maker {
+                &:before {
+                    background-image: url("../images/google_maps_blue.png");
+                }
+            }
+
+            .telephone {
+                &:before {
+                    background-image: url("../images/google_maps_blue.png");
+                }
+            }
+        }
+    }
+
+    .footer-nav li {
+        list-style-type: none;
+        margin-bottom: 18px;
+
+        a {
+            color: $colorTertiary;
+            text-decoration: none;
+
+            .greater-than-sign {
+                color: $colorSecondary;
+                font-weight: bold;
+            }
+        }
+    }
+}
