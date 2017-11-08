@@ -1,13 +1,6 @@
 .realizations {
-    height: 600px;
+    min-height: 600px;
     background: $colorTertiary;
-
-    .main-title {
-        font-size: $fontSize1;
-        font-weight: 500;
-        text-transform: uppercase;
-        margin: 23px 0;
-    }
 
     .blue-block {
         width: 100px;
@@ -59,18 +52,19 @@
         transition: 0.7s;
 
         &:hover {
-            transform: scale(1.11);
+            transform: scale(1.12);
         }
 
         .realization-tittle {
             font-weight: 600;
             font-size: $fontSize3;
             text-align: center;
+            margin-top: 10px;
         }
 
         .realizactin-text {
             text-align: center;
-            padding: 15px 10px 20px 10px;
+            padding: 18px 10px 20px 10px;
         }
     }
 }

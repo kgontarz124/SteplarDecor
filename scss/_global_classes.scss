@@ -4,6 +4,13 @@
     max-width: 1040px;
 }
 
+.main-title {
+    font-size: $fontSize1;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 28px 0;
+}
+
 .check {
     text-transform: uppercase;
     color: $colorSecondary;
