@@ -1,17 +1,6 @@
 .realizations {
     min-height: 600px;
     background: $colorTertiary;
-
-    .blue-block {
-        width: 100px;
-        height: 5px;
-        background: $colorSecondary;
-    }
-
-    .subtitle {
-        font-size: $fontSize3;
-        margin: 18px 0;
-    }
 }
 
 .box-with-realization {
@@ -57,21 +46,5 @@
             text-align: center;
             padding: 15px 10px 20px 10px;
         }
-    }
-}
-
-.realizations button {
-    background: $colorSecondary;
-    color: $colorTertiary;
-    border: none;
-    padding: 10px 15px;
-    margin-top: 45px;
-    font-size: $fontSize3;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: 0.7s;
-
-    &:hover {
-        background: $colorPrimary;
     }
 }
