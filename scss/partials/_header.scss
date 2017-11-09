@@ -7,6 +7,7 @@ header {
         align-items: center;
         justify-content: space-between;
         padding: 0 40px;
+        transition: 0.5s all;
 
         .main-logo {
             a {
@@ -104,6 +105,35 @@ header .sub-header {
 
         &:last-of-type {
             padding-right: 0;
+        }
+    }
+}
+
+//staly header
+header {
+    &.header-scroll {
+        height:40px;
+        width: 100%;
+        background: $colorSecondary;
+        box-shadow: 0 1px 5px rgba(#000, 0.5);
+        position: fixed;
+        z-index: 1000;
+        .main-header{
+            height:40px;
+            .main-logo {
+                img {
+                    max-width: 100px;
+                }
+            }
+            .main-nav a {
+                color:$colorTertiary;
+                &:hover {
+                        color: $colorPrimary;
+                }
+            }
+        }
+        .sub-header {
+            display: none;
         }
     }
 }

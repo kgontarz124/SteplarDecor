@@ -53,4 +53,23 @@ $(function() {
                 blocks.eq(counter).addClass("active-block");
             }
     });
+
+
+    //podczas scrollu dodaje headerowi klase header-scroll
+    var testHeader = function() {
+        var top = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0);
+        console.log(top);
+        if (top > 154) {
+            header.classList.add("header-scroll");
+        } else {
+            header.classList.remove("header-scroll");
+        }
+    };
+
+    var header = document.querySelector("header");
+    testHeader();
+    window.addEventListener("scroll", function() {
+        testHeader();
+    });
+
 });

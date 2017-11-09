@@ -19,7 +19,7 @@
 
         .arrow-left, .arrow-right, .slider-blocks {
             position: absolute;
-            z-index: 1;
+            z-index: 10;
         }
         .arrow-left {
             top: 50%;

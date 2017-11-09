@@ -15,6 +15,11 @@
     text-transform: uppercase;
     color: $colorSecondary;
     text-decoration: none;
+    font-size: $fontSize3;
+
+    &:hover {
+        color: $colorPrimary;
+    }
 }
 
 .align-to-center {
