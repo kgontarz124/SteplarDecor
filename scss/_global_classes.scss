@@ -16,6 +16,7 @@
     color: $colorSecondary;
     text-decoration: none;
     font-size: $fontSize3;
+    transition: 0.5s color;
 
     &:hover {
         color: $colorPrimary;

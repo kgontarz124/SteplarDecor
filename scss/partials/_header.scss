@@ -112,9 +112,9 @@ header .sub-header {
 //staly header
 header {
     &.header-scroll {
-        height:40px;
+        height:45px;
         width: 100%;
-        background: $colorSecondary;
+        background: $colorTertiary;
         box-shadow: 0 1px 5px rgba(#000, 0.5);
         position: fixed;
         z-index: 1000;
@@ -125,12 +125,12 @@ header {
                     max-width: 100px;
                 }
             }
-            .main-nav a {
-                color:$colorTertiary;
-                &:hover {
-                        color: $colorPrimary;
-                }
-            }
+            // .main-nav a {
+            //     // color:;
+            //     &:hover {
+            //             color: $colorPrimary;
+            //     }
+            // }
         }
         .sub-header {
             display: none;
