@@ -15,5 +15,11 @@ html, body {
     font-family: $fontPrimary;
     font-size: 13px;
     color: $colorPrimary;
+}
+
+@media screen and (max-width:750px) {
+    html, body {
+        font-size: 11px;
+    }
 
 }

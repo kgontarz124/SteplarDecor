@@ -70,6 +70,13 @@ $(function() {
         testHeader();
     });
 
+    //toggle-nav
+    var body = $("body");
+    $(".toggle-nav").on("click", function() {
+        body.toggleClass("show-main-nav");
+    });
+
+
 
     //form
     var $inputs = $('form input[required], form textarea[required], select[required]');

@@ -27,7 +27,7 @@
         max-width: 90%;
         background: rgba(249,249,249,0.7);
         position: absolute;
-        bottom: 5px;
+        bottom: 12px;
         left: 15px;
         display: flex;
         flex-direction: column;
@@ -38,13 +38,37 @@
             font-weight: 600;
             font-size: $fontSize3;
             text-align: center;
-            margin-top: 5px;
             margin-bottom: 5px;
         }
 
         .realizactin-text {
             text-align: center;
-            padding: 15px 10px 20px 10px;
+            padding: 15px 10px 10px 10px;
         }
+    }
+}
+
+//RWD
+@media screen and (max-width:880px) {
+    .box-with-realization .realization-message {
+        left: 10px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        [class*="col-"] {
+            width:314.33px;
+        }
+    }
+    .box-with-realization .realization-message {
+        left: 15px;
+    }
+    .btn {
+        margin: 20px 0;
     }
 }

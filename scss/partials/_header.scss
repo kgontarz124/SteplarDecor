@@ -8,6 +8,7 @@ header {
         justify-content: space-between;
         padding: 0 40px;
         transition: 0.5s all;
+        position: relative;
 
         .main-logo {
             a {
@@ -15,7 +16,7 @@ header {
                 padding-top: 10px;
             }
             img {
-                max-width: 180px;
+                width: 180px;
                 height: auto;
                 display: inline-block;
                 transition: 0.5s all;
@@ -70,6 +71,11 @@ header .sub-header {
                 text-decoration: none;
                 color: $colorPrimary;
                 position: relative;
+                transition: 0.5s color;
+
+                &:hover {
+                    color: $colorSecondary;
+                }
 
                 .map-maker {
                     &:before {
@@ -109,6 +115,81 @@ header .sub-header {
     }
 }
 
+
+//toggle-nav
+.main-header .toggle-nav {
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	border: 0;
+	height: 50px;
+	width: 50px;
+	background: none;
+	text-indent: -9999px;
+	overflow: hidden;
+	cursor: pointer;
+
+	&:focus {
+		outline:none;
+	}
+
+	span {
+		width: 80%;
+		height: 6px;
+		border-radius: 4px;
+		background: $colorSecondary;
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: 0.5s 0.5s opacity;
+		opacity:1;
+
+		&:nth-of-type(1) {
+			margin-top:-10px;
+		}
+		&:nth-of-type(3) {
+			margin-top:10px;
+		}
+		&:nth-of-type(2) {
+			background: transparent;
+			&:before,
+			&:after {
+				transition: 0.5s 0.5s all;
+				content:'';
+				width: 100%;
+				height: 6px;
+				border-radius: 4px;
+				background: $colorSecondary;
+				display: block;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				opacity: 1;
+			}
+		}
+	}
+}
+.show-main-nav .toggle-nav {
+	span:nth-of-type(1), span:nth-of-type(3) {
+		opacity: 0;
+		transition: 0.5s opacity;
+	}
+	span:nth-of-type(2) {
+		background: transparent;
+	}
+	span:nth-of-type(2):before {
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	span:nth-of-type(2):after {
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+}
+
 //staly header
 header {
     &.header-scroll {
@@ -125,15 +206,93 @@ header {
                     max-width: 100px;
                 }
             }
-            // .main-nav a {
-            //     // color:;
-            //     &:hover {
-            //             color: $colorPrimary;
-            //     }
-            // }
         }
         .sub-header {
             display: none;
+        }
+    }
+}
+
+//RWD -main-header
+@media screen and (max-width:750px) {
+    header .main-header .toggle-nav {
+        display: block;
+    }
+    header .main-header .main-nav {
+        position: fixed;
+        left:-320px;
+        top:0;
+        width:200px;
+        height: 100%;
+        z-index: 10;
+        box-shadow: 2px 0 3px rgba(#000, 0.4), 3px 0 10px rgba(#000, 0.2);
+        background: $colorSecondary;
+        color:$colorTertiary;
+        transition: 0.5s left ease-in;
+
+        ul li {
+            display: block;
+            border-bottom: 1px solid rgba(#fff, 0.2);
+
+            a {
+                color:$colorTertiary;
+                padding:20px;
+                display: block;
+                transition: 0.3s background;
+
+                &:hover {
+                    color:$colorTertiary;
+                    background: rgba(#fff, 0.2);
+                }
+            }
+
+            &.active {
+                border-left:5px solid $colorSecondary;
+            }
+        }
+    }
+    body.show-main-nav .main-nav {
+        left:0;
+    }
+}
+
+//RWD -sub-header
+@media screen and (max-width:620px) {
+    header {
+        height: 216px;
+
+        .main-header {
+            padding-left: 15px;
+        }
+
+        .sub-header  {
+            min-height: 96px;
+            flex-direction: column;
+            padding: 0;
+
+            .quick-contact ul {
+                width: 100%;
+                height: 64px;
+
+                li {
+                    display: block;
+                    width: 100%;
+                    margin-left: 15px;
+                    height: 32px;
+                    background: $colorTertiary;
+                    display: flex;
+                    align-items: center;
+                }
+
+                li:nth-of-type(2) {
+                    background: white;
+                }
+            }
+        }
+
+        .sub-header .header-social {
+            height: 32px;
+            margin-left: 6px;
         }
     }
 }

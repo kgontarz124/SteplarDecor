@@ -23,7 +23,7 @@ $gutter : 15px;
     [class*="col-"] {
         float:none;
         width:100%;
-        margin-bottom: $gutter * 2;
+        margin-bottom: $gutter;
     }
 }
 
@@ -36,7 +36,7 @@ $gutter : 15px;
             float: left;
             padding-left: $gutter;
             padding-right: $gutter;
-            margin-bottom: 0;
+            margin-bottom: $gutter;
         }
 
         @for $i from 1 through $column {
