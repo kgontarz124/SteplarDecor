@@ -63,10 +63,14 @@
 
         [class*="col-"] {
             width:314.33px;
+
+            img {
+                margin-left: 0;
+            }
         }
     }
     .box-with-realization .realization-message {
-        left: 15px;
+        left: 17px;
     }
     .realization-btn {
         display: none;
