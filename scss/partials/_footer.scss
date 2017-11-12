@@ -115,10 +115,6 @@
 }
 
 @media screen and (max-width:335px) {
-    .footer-contact {display: none;}
-    .main-footer [class*="col-"] {width: 100%;}
-    .main-footer .footer-logo {
-        display: flex;
-        justify-content: center;
-    }
+    .main-footer .footer-logo {display: none;}
+    .main-footer [class*="col-"] { &:nth-of-type(3){width: 100%;}}
 }
