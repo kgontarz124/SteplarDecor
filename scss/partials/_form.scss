@@ -40,6 +40,7 @@
 
 .form textarea {
     height:10rem;
+    resize: none;
 }
 
 .form label {
@@ -97,4 +98,12 @@
     to {
         transform: translate(-50%, -50%) rotate(360deg);
     }
+}
+
+//RWD
+@media screen and (max-width:460px) {
+    .form-intro, .form {
+        margin: 0 10px;
+    }
+
 }
