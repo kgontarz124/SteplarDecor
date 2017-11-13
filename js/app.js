@@ -57,7 +57,7 @@ $(function() {
     var testHeader = function() {
         var top = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0);
 
-        if (top > 154) {
+        if (top > 120) {
             header.classList.add("header-scroll");
         } else {
             header.classList.remove("header-scroll");
