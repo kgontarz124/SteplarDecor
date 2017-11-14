@@ -104,6 +104,23 @@
     }
 }
 
+.form-send-success {
+    display: flex;
+    height: 60px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: $fontSize3;
+}
+
+.send-error {
+    color: $colorSenary;
+    display: flex;
+    justify-content: center;
+    font-size: $fontSize3;
+}
+
+
 //RWD
 @media screen and (max-width:750px) {
     .form-section {

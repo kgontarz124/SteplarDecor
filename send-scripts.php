@@ -2,7 +2,9 @@
 $mailToSend = 'kasiekk124@o2.pl';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
+    $companyName = $_POST['company-name'];
     $email = $_POST['email'];
+    $phone = $_POST['phone'];
     $message = $_POST['message'];
     $errors = Array();
 	$return = Array();
@@ -33,14 +35,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     .msg-title {margin-top:30px;}
                 </style>
                 <body>
-                    <div>Imię: <strong>$name</strong></div>
+                    <div>Imię i nazwisko: <strong>$name</strong></div>
+                    <div>Nazwa firmy: <strong>$companyName</strong></div>
                     <div>Email: <a href=\"mailto:$email\">$email</a></div>
+                    <div>Telefon: <a href=\"tel:$phone\">$phone</a></div>
                     <div class=\"msg-title\"> <strong>Wiadomość:</strong></div>
                     <div>$message</div>
                 </body>
             </html>";
 
-        if (mail($mailToSend, 'Wiadomość ze strony - ' . date("d-m-Y"), $message, $headers)) {
+        if (mail($mailToSend, 'Wiadomość ze strony steplardecor.com - ' . date("d-m-Y"), $message, $headers)) {
             $return['status'] = 'ok';
         } else {
             $return['status'] = 'error';
