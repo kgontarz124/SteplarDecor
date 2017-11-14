@@ -57,7 +57,7 @@ $(function() {
     var testHeader = function() {
         var top = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0);
 
-        if (top > 120) {
+        if (top > 0) {
             header.classList.add("header-scroll");
         } else {
             header.classList.remove("header-scroll");
@@ -131,7 +131,6 @@ $(function() {
 
 
     $('.form').on('submit', function(e) {
-        e.preventDefault();
 
         var $form = $(this);
 
