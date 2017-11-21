@@ -13,6 +13,7 @@
 
 .main-footer {
     min-width: 80px;
+    height: 165px;
     background: $colorPrimary;
     display: flex;
     color: $colorTertiary;
@@ -31,42 +32,49 @@
         justify-content: flex-end;
     }
 
-    .footer-contact li {
-        list-style-type: none;
-        margin-bottom: 18px;
-        margin-left: 40px;
+    .footer-contact ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        a {
-            color: $colorTertiary;
-            text-decoration: none;
-            position: relative;
-            line-height: 20px;
-            transition: 0.5s color;
+            li {
+            list-style-type: none;
+            margin-bottom: 18px;
+            margin-left: 40px;
+            width: 60%;
 
-            &:hover {
-                color: $colorSecondary;
-            }
+            a {
+                color: $colorTertiary;
+                text-decoration: none;
+                position: relative;
+                line-height: 20px;
+                transition: 0.5s color;
 
-            .map-maker, .telephone {
-                &:before {
-                    content: "";
-                    position: absolute;
-                    width: 24px;
-                    height: 24px;
-                    top: -6px;
-                    left: -35px;
+                &:hover {
+                    color: $colorSecondary;
                 }
-            }
 
-            .map-maker {
-                &:before {
-                    background-image: url("../images/google_maps_blue.png");
+                .map-maker, .telephone {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 24px;
+                        height: 24px;
+                        top: -6px;
+                        left: -35px;
+                    }
                 }
-            }
 
-            .telephone {
-                &:before {
-                    background-image: url("../images/call _blue.png");
+                .map-maker {
+                    &:before {
+                        background-image: url("../images/google_maps_blue.png");
+                    }
+                }
+
+                .telephone {
+                    &:before {
+                        background-image: url("../images/call _blue.png");
+                    }
                 }
             }
         }
