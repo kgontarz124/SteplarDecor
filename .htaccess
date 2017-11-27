@@ -5,14 +5,14 @@ Deny from all
 </FilesMatch>
 
 RewriteEngine on
-RewriteRule o-nas o-nas/o-nas.html
-RewriteRule wypozycz wypozycz/wypozycz.html
+RewriteRule o-nas -nas.html
+RewriteRule wypozycz wypozycz.html
 RewriteRule zamow zamow/zamow.html
-RewriteRule realizacje realizacje/realizacje.html
-RewriteRule kontakt kontakt/kontakt.html
-RewriteRule dr-irena-iris realizacje/dr-irena-iris/dr-irena-iris.html
-RewriteRule mercedes realizacje/mercedes/mercedes.html
-RewriteRule jack-daniels realizacje/jack-daniels/jack-daniels.html
-RewriteRule bmw realizacje/bmw/bmw.html
-RewriteRule spar realizacje/spar/spar.html
-RewriteRule asseco realizacje/asseco/asseco.html
+RewriteRule realizacje realizacje.html
+RewriteRule kontakt kontakt.html
+RewriteRule dr-irena-iris dr-irena-iris.html
+RewriteRule mercedes mercedes.html
+RewriteRule jack-daniels jack-daniels.html
+RewriteRule bmw bmw.html
+RewriteRule spar spar.html
+RewriteRule asseco asseco.html

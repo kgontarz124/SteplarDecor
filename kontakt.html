@@ -2,13 +2,11 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Steplar Decor</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="/image/png" href="/favicon16x16.png" />
     <link rel="icon" type="/image/png" href="/favicon32x32.png" />
 </head>
@@ -19,11 +17,11 @@
             <div class="main-header">
                 <div class="main-logo">
                     <a href="/">
-                        <img src="/images/logo_steplar_decor.png" alt="Logo Steplar Decor">
+                        <img src="images/logo_steplar_decor.png" alt="Logo Steplar Decor">
                     </a>
                 </div>
 
-                <nav class="main-nav">
+                <div class="main-nav">
                     <ul>
                         <li><a href="/o-nas">O nas</a></li>
                         <li><a href="/wypozycz">Wypożycz</a></li>
@@ -31,7 +29,7 @@
                         <li><a href="/realizacje">Realizacje</a></li>
                         <li><a href="/kontakt">Kontakt</a></li>
                     </ul>
-                </nav>
+                </div>
                 <button class="toggle-nav">
                     <span></span>
                     <span></span>
@@ -50,13 +48,13 @@
                 <div class="header-social">
                     <ul class="menu-social-links">
                         <li><a href="https://www.facebook.com/steplardecor/" target="_blank">
-                            <img src="/images/facebook_blue.png" alt="facebook icon">
+                            <img src="images/facebook_blue.png" alt="facebook icon">
                         </a></li>
                         <li><a href="https://twitter.com/SteplarDecor" target="_blank">
-                            <img src="/images/twetter_blue.png" alt="twetter icon">
+                            <img src="images/twetter_blue.png" alt="twetter icon">
                         </a></li>
                         <li><a href="https://www.linkedin.com/company/SteplarDecor/" target="_blank">
-                            <img src="/images/in_blue.png" alt="in icon">
+                            <img src="images/in_blue.png" alt="in icon">
                         </a></li>
                     </ul>
                 </div>
@@ -65,44 +63,75 @@
     </header>
 
     <main>
-        <div class="container">
-            <article class="whole-box-realization">
-                <section class="photos-section">
-                    <img src="realizacje-spar-1.jpg" alt="Spar realizacja 1">
-                    <img src="realizacje-spar-2.jpg" alt="Spar realizacja 2">
-                    <img src="realizacje-spar-3.jpg" alt="Spar realizacja 3">
+        <article class="form-section">
+            <div class="container">
+                <div class="form-intro">
+                    <header class="align-to-center">
+                        <span class="main-title">formularz kontaktowy</span>
+                        <div class="blue-block"></div>
+                        <span class="subtitle">Napisz do nas, a my niebawem skontaktujemy się z Tobą</span>
+                    </header>
+                </div>
+
+                <section>
+                    <form class="form" id="contactForm" method="post" novalidate action="/send-scripts.php">
+                        <div class="form-row">
+                            <label for="field-name">Imię i nazwisko: <span class="required-el">*</span></label>
+                            <input type="text" name="name" required id="field-name" data-error="Wypełnij to pole" pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+">
+                        </div>
+                        <div class="form-row">
+                            <label for="field-name">Nazwa firmy:</label>
+                            <input type="text" name="company-name">
+                        </div>
+                        <div class="form-row">
+                            <label for="field-email">Mail: <span class="required-el">*</span></label>
+                            <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                        </div>
+                        <div class="form-row">
+                            <label for="field-name">Nr kontaktowy:</label>
+                            <input type="tel" name="phone">
+                        </div>
+                        <div class="form-row">
+                            <label for="field-message">Wiadomość: <span class="required-el">*</span></label>
+                            <textarea name="message" required data-error="Musisz wypełnić pole" id="field-message" pattern=".+"></textarea>
+                        </div>
+                        <span class="required-text">* pola wymagane</span>
+                        <span class="form-row honey-row">
+                            <label for="honey">Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label>
+                            <input type="text" name="honey">
+                        </span>
+                        <div class="form-row">
+                            <div class="align-to-center">
+                                <button type="submit" class="btn submit-btn">
+                                    Wyślij
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </section>
-                <section class="description-section">
-                    <span class="realization-tittle">trofea zwycięzców</span>
-                    <p class="realization-text">
-                        Sukces to ciężka praca. Każdy przedsiębiorca wie jak ważnym, w tym procesie, jest sposób prezentacji własnej  marki, za którym zawsze powinna iść najwyższa jakość.
-                    </p>
-                </section>
-            </article>
-        </div>
+            </div>
+        </article>
     </main>
-
-
 
     <footer>
         <div class="container">
             <div class="footer-social">
                 <ul class="menu-social-links">
                     <li><a href="https://www.facebook.com/steplardecor/" target="_blank" target="_blank">
-                        <img src="/images/facebook_white.png" alt="facebook icon">
+                        <img src="images/facebook_white.png" alt="facebook icon">
                     </a></li>
                     <li><a href="https://twitter.com/SteplarDecor" target="_blank" target="_blank">
-                        <img src="/images/twetter_white.png" alt="twetter icon">
+                        <img src="images/twetter_white.png" alt="twetter icon">
                     </a></li>
                     <li><a href="https://www.linkedin.com/company/SteplarDecor/" target="_blank" target="_blank">
-                        <img src="/images/in_white.png" alt="in icon">
+                        <img src="images/in_white.png" alt="in icon">
                     </a></li>
                 </ul>
             </div>
             <div class="main-footer">
                 <div class="footer-logo col-1-4">
                     <a href="/">
-                        <img src="/images/logo-steplar-biale.png" alt="Logo Steplar Decor">
+                        <img src="images/logo-steplar-biale.png" alt="Logo Steplar Decor">
                     </a>
                 </div>
                 <div class="short-description col-1-4">
@@ -134,7 +163,9 @@
             </div>
         </div>
     </footer>
-<script src="/js/jquery-3.2.1.js"></script>
-<script src="/js/app.js"></script>
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/app.js"></script>
+<script src="validation.js"></script>
 </body>
 </html>
