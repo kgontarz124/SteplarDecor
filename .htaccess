@@ -5,14 +5,6 @@ Deny from all
 </FilesMatch>
 
 RewriteEngine on
-RewriteRule o-nas o-nas.html
-RewriteRule wypozycz wypozycz.html
-RewriteRule zamow zamow.html
-RewriteRule realizacje realizacje.html
-RewriteRule kontakt kontakt.html
-RewriteRule dr-irena-iris dr-irena-iris.html
-RewriteRule mercedes mercedes.html
-RewriteRule jack-daniels jack-daniels.html
-RewriteRule bmw bmw.html
-RewriteRule spar spar.html
-RewriteRule asseco asseco.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
