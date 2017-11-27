@@ -75,4 +75,18 @@ $(function() {
     $(".toggle-nav").on("click", function() {
         body.toggleClass("show-main-nav");
     });
+
+
+    //realizations - upSlide box
+    var realizationsBoxes= $(".realization-box");
+
+    realizationsBoxes.on("mouseenter", function() {
+        $(this).find("div").css("height", "100%");
+        $(this).find("div").children().css("display", "inline");
+    })
+    realizationsBoxes.on("mouseleave", function() {
+        $(this).find("div").css("height", "0");
+        $(this).find("div").children().css("display", "none");
+    })
+
 });

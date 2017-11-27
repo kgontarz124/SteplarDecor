@@ -12,10 +12,14 @@
     text-align: center;
 }
 
+.link {
+    text-decoration: none;
+    color: $colorPrimary;
+}
+
 .check {
     text-transform: uppercase;
     color: $colorSecondary;
-    text-decoration: none;
     font-size: $fontSize3;
     transition: 0.5s color;
 
@@ -51,6 +55,7 @@
     font-size: $fontSize3;
     text-transform: uppercase;
     border-radius: 2px;
+    text-decoration: none;
     transition: 0.7s;
 
     &:hover {

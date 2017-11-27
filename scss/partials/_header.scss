@@ -1,4 +1,4 @@
-header {
+.side-header {
     height: 154px;
 
     .main-header {
@@ -35,7 +35,7 @@ header {
                     text-decoration: none;
                     color: $colorPrimary;
                     font-weight: 500;
-                    transition: 0.5s color;
+                    transition: 0.5s all;
 
                     &:last-of-type {
                     	padding-right: 0;
@@ -50,7 +50,7 @@ header {
     }
 }
 
-header .sub-header {
+.side-header .sub-header {
     height: 34px;
     background-color: $colorTertiary;
     display: flex;
@@ -191,7 +191,7 @@ header .sub-header {
 }
 
 //staly header
-header {
+.side-header {
     &.header-scroll {
         height:45px;
         width: 100%;
@@ -215,10 +215,10 @@ header {
 
 //RWD -main-header
 @media screen and (max-width:750px) {
-    header .main-header .toggle-nav {
+    .side-header .main-header .toggle-nav {
         display: block;
     }
-    header .main-header .main-nav {
+    .side-header .main-header .main-nav {
         position: fixed;
         left:-320px;
         top:0;
@@ -251,14 +251,14 @@ header {
             }
         }
     }
-    body.show-main-nav .main-nav {
+    body.show-main-nav .side-header .main-nav {
         left:0;
     }
 }
 
 //RWD -sub-header
 @media screen and (max-width:620px) {
-    header {
+    .side-header {
         height: 216px;
 
         .main-header {
@@ -276,7 +276,6 @@ header {
 
                 li {
                     display: block;
-                    width: 100%;
                     margin-left: 15px;
                     height: 32px;
                     background: $colorTertiary;

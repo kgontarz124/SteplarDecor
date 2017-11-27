@@ -1,0 +1,101 @@
+.realization-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .realization-box {
+        width: 49%;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+
+        .realization-img {
+            width: 100%;
+        }
+
+        .description-box {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 0;
+            background: $colorSecondary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s all;
+
+            .description-text {
+                color: $colorTertiary;
+                text-transform: uppercase;
+                font-size: $fontSize1;
+                text-align: center;
+                font-weight: 500;
+                display: none;
+            }
+        }
+
+        a {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+}
+
+//RWD
+@media screen and (max-width:1060px) {
+    .realization-row {
+        width: 98%;
+        margin: 0 10px;
+    }
+}
+@media screen and (max-width:800px) {
+    .realization-row {
+        flex-direction: column;
+        align-items: center;
+
+        .realization-box {
+            width: 60%;
+        }
+    }
+}
+
+
+
+//single realization
+.whole-box-realization {
+    display: flex;
+    width: 100%;
+
+    .photos-section {
+        max-width: 70%;
+
+        img {
+            margin-top: 20px;
+
+            &:last-of-type {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .description-section {
+        margin-top: 20px;
+        padding: 20px 0 0 30px;
+        max-width: 312px;
+
+        .realization-tittle {
+            color: $colorSecondary;
+            text-transform: uppercase;
+            font-size: $fontSize3;
+            font-weight: 500;
+        }
+
+        .realization-text {
+            text-align: justify;
+            margin-top: 15px;
+        }
+    }
+}

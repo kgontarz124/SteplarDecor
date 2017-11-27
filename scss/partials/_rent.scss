@@ -1,0 +1,24 @@
+.other-boxes {
+    display: flex;
+
+    .box {
+        width: 50%;
+    }
+
+    .opction-content {
+        height: 300px;
+        justify-content: flex-start;
+
+        .opction-title {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+// RWD
+@media screen and (max-width:460px) {
+    .other-boxes {
+        display: block;
+        .opction-content {width: 100%;}
+    }
+}
