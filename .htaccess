@@ -5,9 +5,9 @@ Deny from all
 </FilesMatch>
 
 RewriteEngine on
-RewriteRule o-nas -nas.html
+RewriteRule o-nas o-nas.html
 RewriteRule wypozycz wypozycz.html
-RewriteRule zamow zamow/zamow.html
+RewriteRule zamow zamow.html
 RewriteRule realizacje realizacje.html
 RewriteRule kontakt kontakt.html
 RewriteRule dr-irena-iris dr-irena-iris.html
