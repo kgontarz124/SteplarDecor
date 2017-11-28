@@ -65,10 +65,28 @@ $(function() {
     };
 
     var header = document.querySelector("header");
-    testHeader();
     window.addEventListener("scroll", function() {
         testHeader();
     });
+
+
+    //podczas scrollu zmieniam opisowi margin-top
+    var testDescription = function() {
+        var top = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0);
+
+        if (top > 0) {
+            descriptionSection.style.marginTop = 50 + top + "px";
+        } else {
+            descriptionSection.style.marginTop = "20px";
+        }
+    };
+
+    var descriptionSection = document.querySelector(".description-section");
+    if (descriptionSection !== null) {
+        window.addEventListener("scroll", function() {
+            testDescription();
+        });
+    }
 
     //toggle-nav
     var body = $("body");

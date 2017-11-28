@@ -48,7 +48,6 @@
 @media screen and (max-width:1060px) {
     .realization-row {
         width: 98%;
-        margin: 0 10px;
     }
 }
 @media screen and (max-width:800px) {
@@ -68,6 +67,7 @@
 .whole-box-realization {
     display: flex;
     width: 100%;
+
 
     .photos-section {
         max-width: 70%;
@@ -97,6 +97,30 @@
             text-align: justify;
             margin-top: 15px;
             font-size: $fontSize3;
+        }
+    }
+}
+
+
+@media screen and (max-width:1055px) {
+    .whole-box-realization {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .whole-box-realization {
+        display: block;
+
+        .photos-section {
+            max-width: 100%;
+        }
+
+        .description-section {
+            margin-top: 0 !important;
+            max-width: 100%;
+            padding: 10px 0 40px 0;
         }
     }
 }

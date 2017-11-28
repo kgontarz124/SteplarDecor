@@ -18,7 +18,10 @@
 // RWD
 @media screen and (max-width:460px) {
     .other-boxes {
-        display: block;
-        .opction-content {width: 100%;}
+        flex-direction: column;
+        align-items: center;
+        .opction-content {
+            width: 100%;
+        }
     }
 }
