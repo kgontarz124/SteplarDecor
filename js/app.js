@@ -1,4 +1,5 @@
 $(function() {
+    "use strict";
 
     var leftArrow = $(".arrow-left");
     var rightArrow = $(".arrow-right");
@@ -51,6 +52,15 @@ $(function() {
                 blocks.eq(counter).addClass("active-block");
             }
     });
+
+    //pokazanie sie submenu
+    var thirdElNav = $(".main-nav").find("li").eq(2);
+    var submenu = $(".main-nav-submenu");
+
+    thirdElNav.on("click", function (){
+            submenu.slideToggle();
+    });
+
 
 
     //podczas scrollu dodaje headerowi klase header-scroll
