@@ -1,5 +1,6 @@
 .order {
     padding: 80px 0;
+    width: 100%;
 
     h1 {
         font-size: $fontSize1;
@@ -10,7 +11,7 @@
 
 section .part-of-project {
     margin: 12px 0;
-    width: 60%;
+    width: 70%;
 
     [class*="col-"] {
         margin-bottom: 0;
