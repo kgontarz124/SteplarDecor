@@ -17,14 +17,14 @@ section .part-of-project {
         margin-bottom: 0;
     }
 
-    .col-3-15 {
+    .col-2-12 {
         height: 85px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
     }
 
-    .col-12-15 {
+    .col-10-12 {
         height: 85px;
         display: flex;
         align-items: center;
@@ -42,11 +42,11 @@ section .part-of-project {
         [class*="col-"] {
             width: 100%;
         }
-        .col-3-15{
+        .col-2-12{
             justify-content: center;
             padding-bottom: 20px;
         }
-        .col-12-15 {
+        .col-10-12 {
             height: auto;
             justify-content: center;
         }

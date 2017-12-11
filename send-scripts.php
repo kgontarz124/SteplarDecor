@@ -1,5 +1,5 @@
 <?php
-$mailToSend = 'kasiekk124@o2.pl';
+$mailToSend = 'biuro@steplar-decor.pl';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $companyName = $_POST['company-name'];
@@ -9,6 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $antiSpam = $_POST['honey'];
     $errors = Array();
 	$return = Array();
+    if (!empty($antiSpam)) {
+        array_push($errors, 'spam');
+    } else {
+        $return['status'] = 'ok';
+    }
     if (empty($name)) {
         array_push($errors, 'name');
     }
@@ -45,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </body>
             </html>";
 
-        if (mail($mailToSend, 'Wiadomość ze strony steplardecor.com - ' . date("d-m-Y"), $message, $headers)) {
+        if (mail($mailToSend, 'Wiadomość ze strony steplar-decor.pl - ' . date("d-m-Y"), $message, $headers)) {
             $return['status'] = 'ok';
         } else {
             $return['status'] = 'error';
